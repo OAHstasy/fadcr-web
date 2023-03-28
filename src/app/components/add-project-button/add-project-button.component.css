@@ -1,0 +1,25 @@
+button {
+  font-family: "Spline Sans", sans-serif;
+  font-size: large;
+  line-height: 1.5;
+  display: flex;
+  line-height: 1;
+  border: 2px solid black;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  font-weight: 500;
+  align-items: center;
+}
+button:hover {
+  background-color: white;
+  cursor: pointer;
+}
+button:active {
+  background-color: white;
+  border-color: white;
+  cursor: grabbing;
+  transform: translateY(4px);
+}
+button i {
+    margin-right: .6rem;
+}

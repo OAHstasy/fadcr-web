@@ -1,0 +1,14 @@
+<body *ngIf="agent">
+  <div>
+    <article class="information card">
+      <span class="tag">{{agent.owner}}</span>
+      <h2 class="title">{{agent.repoName}}</h2>
+      <p class="info">
+        {{agent.readme}}
+      </p>
+      <button type="button" class="button">
+        <span>Show Project</span>
+      </button>
+    </article>
+  </div>
+</body>
