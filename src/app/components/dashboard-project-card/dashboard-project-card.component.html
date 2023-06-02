@@ -1,14 +1,19 @@
-<body *ngIf="agent">
-  <div>
-    <article class="information card">
-      <span class="tag">{{agent.owner}}</span>
-      <h2 class="title">{{agent.repoName}}</h2>
-      <p class="info">
-        {{agent.readme}}
-      </p>
-      <button type="button" class="button">
-        <span>Show Project</span>
-      </button>
-    </article>
+<div class="card col-auto"  *ngIf="agent">
+  <div class="row justify-content-between p-0">
+    <div class="card-heading col-10">
+      <h3 class="m-0 p-0" style="font-size: small; color: gray; font-weight: 400;">{{ agent.owner }}</h3>
+      <h3 class="card-heading">{{ agent.repositoryName }}</h3>
+    </div>
+    <div class="col-1 project-status pt-3">
+      <div [ngClass]="agent.online ? 'online' : 'offline'"></div>
+    </div>
   </div>
-</body>
+
+  
+  <div class="card-content">
+    <p>{{ agent.about }}</p>
+  </div>
+  <div class="button-container row">
+    <button class="card-button w-50" (click)="getProject(agent)">Show Project</button>
+  </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProjectInformation } from 'src/app/models/ProjectInformation';
 
 @Component({
@@ -9,4 +10,15 @@ import { ProjectInformation } from 'src/app/models/ProjectInformation';
 export class DashboardProjectCardComponent {
 
   @Input() agent!: ProjectInformation;
+
+  constructor(
+    private router: Router
+  ) {
+
+  }
+
+  public getProject(project: ProjectInformation) {
+    localStorage.setItem("project", JSON.stringify(project));
+    this.router.navigateByUrl(`${project.repositoryName}`)
+  }
 }

@@ -16,25 +16,42 @@ export class DashboardPageComponent {
     this.getAllAgents();
   }
 
-  currentAgentsInformation: ProjectInformation[] = [
-    {
-      readme: "string",
-      createdAt: "string",
-      numberOfCommits: 123,
-      owner: "string",
-      repoName: "project2"
-    },
-    {
-      readme: "string",
-      createdAt: "string",
-      numberOfCommits: 123,
-      owner: "string",
-      repoName: "project1"
-    }
-  ];
+  currentAgentsInformation!: ProjectInformation[];
   private getAllAgents() {
     this.agentService.getAllAgents().subscribe( result => {
       this.currentAgentsInformation = result;
     });
+
+    if(! this.currentAgentsInformation) {
+      this.currentAgentsInformation = [
+        {
+          id: "645677d29fec02647d4420db",
+          owner: "apache",
+          repositoryName: "logging-log4j2",
+          status: "Not Analyzed",
+          about: "This is a test project",
+          online: true,
+          readme: ""
+        },
+        {
+          id: "645677d29fec02647d4420db",
+          owner: "apache",
+          repositoryName: "logging-log4j2",
+          status: "Not Analyzed",
+          about: "This is a test project",
+          online: false,
+          readme: ""
+        },
+        {
+          id: "645677d29fec02647d4420db",
+          owner: "apache",
+          repositoryName: "logging-log4j2",
+          status: "Not Analyzed",
+          about: "This is a test project",
+          online: true,
+          readme: ""
+        }
+      ]
+    }
   }
 }

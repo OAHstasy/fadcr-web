@@ -1,11 +1,8 @@
 <body>
     <app-sidebar></app-sidebar>
     <div class="m-3">
-        <app-add-project-button></app-add-project-button>
-        <div class="mt-5">
-            <div *ngFor="let agent of currentAgentsInformation" class="d-flex">
-                <app-dashboard-project-card class="col" [agent]="agent"></app-dashboard-project-card>
-            </div>
+        <div class="mt-5 row">
+                <app-dashboard-project-card *ngFor="let agent of currentAgentsInformation" class="justify-content-start agent m-0 col-3" [agent]="agent"></app-dashboard-project-card>
         </div>
     </div>
 </body>

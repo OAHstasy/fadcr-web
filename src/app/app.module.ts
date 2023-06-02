@@ -8,6 +8,7 @@ import { DashboardProjectCardComponent } from './components/dashboard-project-ca
 import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.component';
 import { AddProjectButtonComponent } from './components/add-project-button/add-project-button.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProjectInfoPageComponent } from './pages/project-info-page/project-info-page.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     SidebarComponent,
     DashboardProjectCardComponent,
     DashboardPageComponent,
-    AddProjectButtonComponent
+    AddProjectButtonComponent,
+    ProjectInfoPageComponent
   ],
   imports: [
     BrowserModule,
